@@ -16,6 +16,7 @@
 #include <iostream>
 #include "CResizableArray.h"
 #include "CQueue.h"
+#include "CStack.h"
 using namespace std;
 
 
@@ -37,23 +38,53 @@ using namespace std;
 void ArrayTests();
 // char
 void ResizableArrayTestsChar();
-	void ResizableArrayPassByReferenceChar(CResizableArray<char>& clsValues);
+	void ResizableArrayPassByReferenceChar(CResizableArray<char> &clsValues);
 	void ResizableArrayPassByValueChar(CResizableArray<char> clsCopyOfOriginal);
 
 // long
 void ResizableArrayTestsLong();
-void ResizableArrayPassByReferenceLong(CResizableArray<long>& clsValues);
+	void ResizableArrayPassByReferenceLong(CResizableArray<long> &clsValues);
+	void ResizableArrayPassByValueLong(CResizableArray<long> clsCopyOfOriginal);
 
+// double
+void ResizableArrayTestsDouble();
+	void ResizableArrayPassByReferenceDouble(CResizableArray<double> &clsValues);
+	void ResizableArrayPassByValueDouble(CResizableArray<double> clsCopyOfOriginal);
+
+// CStack
 void StackTests();
+	void StackTestsChar();
+		void StackPassByReferenceChar(CStack<char> &clsValues);
+		void StackPassByValueChar(CStack<char> clsCopyOfOriginal);
+	
+	void StackTestsLong();
+		void StackPassByReferenceLong(CStack<long> &clsValues);
+		void StackPassByValueLong(CStack<long> clsCopyOfOriginal);
+	
+	void StackTestsDouble();
+		void StackPassByReferenceDouble(CStack<double>& clsValues);
+		void StackPassByValueDouble(CStack<double> clsCopyOfOriginal);
 
+// CQueue
 void QueueTests();
+	void QueueTestsChar();
+		void QueuePassByReferenceChar(CQueue<char> &clsValues);
+		void QueuePassByValueChar(CQueue<char> clsCopyOfOriginal);
+	
+	void QueueTestsLong();
+		void QueuePassByReferenceLong(CQueue<long> &clsValues);
+		void QueuePassByValueLong(CQueue<long> clsCopyOfOriginal);
+	
+	void QueueTestsDouble();
+		void QueuePassByReferenceDouble(CQueue<double>& clsValues);
+		void QueuePassByValueDouble(CQueue<double> clsCopyOfOriginal);
 
 // --------------------------------------------------------------------------------
 //										MAIN
 // --------------------------------------------------------------------------------
 void main()
 {
-	cout << "I made it this far" << endl;
+	// cout << "I made it this far" << endl;
 	ArrayTests();
 	StackTests();
 	QueueTests();
@@ -122,16 +153,37 @@ void ResizableArrayTestsChar()
 
 
 // --------------------------------------------------------------------------- //
-//	Name:
-//  Abstract:
+//	Name: StackTests
+//  Abstract: run tests of the stack
 // --------------------------------------------------------------------------- //
 void StackTests()
 {
-	
-
+	StackTestsChar();
+	StackTestsLong();
+	StackTestsDouble();
 
 }
 
+	// --------------------------------------------------------------------------- //
+	//	Name: StackTestsChar
+	//  Abstract: test char stack
+	// --------------------------------------------------------------------------- //
+	void StackTestsChar()
+	{
+		cout << "----------------------------" << endl;
+		cout << "Stack tests: Char" << endl;
+		cout << "-----------------------------" << endl;
+		cout << endl;
+
+		CStack<char> clsValues1;
+		clsValues1.Print("Default constructor");
+
+		clsValues1.Push('a');
+		clsValues1.Push('b');
+		clsValues1.Push('c');
+		clsValues1.Print("Push a, b, and c");
+
+	}
 
 
 // --------------------------------------------------------------------------- //

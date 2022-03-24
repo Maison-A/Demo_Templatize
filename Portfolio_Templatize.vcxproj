@@ -143,12 +143,14 @@
     <ClCompile Include="CNode.cpp" />
     <ClCompile Include="CQueue.cpp" />
     <ClCompile Include="CResizableArray.cpp" />
+    <ClCompile Include="CStack.cpp" />
     <ClCompile Include="Templatize_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CNode.h" />
     <ClInclude Include="CQueue.h" />
     <ClInclude Include="CResizableArray.h" />
+    <ClInclude Include="CStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

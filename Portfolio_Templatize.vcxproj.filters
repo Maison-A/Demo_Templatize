@@ -27,6 +27,9 @@
     <ClCompile Include="CResizableArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CNode.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CResizableArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
